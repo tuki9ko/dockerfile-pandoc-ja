@@ -1,0 +1,50 @@
+# 入力ファイル
+#input-files:
+#  - content.md
+#  - content2.md
+
+# 出力ファイル
+#output-file: content.pdf
+
+# --pdf-engine
+pdf-engine: lualatex
+
+# テンプレート
+variables:
+  documentclass: ltjsarticle
+  classoption: pandoc
+  # 字下げ
+  indent: true
+  # 余白
+  geometry:
+    - top=20mm
+    - right=24mm
+    - left=24mm
+    - bottom=20mm
+    - heightrounded
+
+# HTML用テンプレート(HTML以外では無効にしておく)
+template: /usr/lib/easy-pandoc-templates/html/elegant_bootstrap_menu.html
+
+# メタデータ
+metadata:
+#  title: タイトル
+#  figureTitle: "図 "
+#  tableTitle: "表 "
+#  listingTitle: "コード "
+#  figPrefix: "図."
+#  eqnPrefix: "式."
+#  tblPrefix: "表."
+#  lstPrefix: "コード."
+
+# 目次
+table-of-contents: true
+# 目次の深さ
+toc-depth: 2
+
+# 見出しの採番
+number-sections: true
+
+# 各種フィルタ
+filters:
+  - /usr/lib/pandoc-crossref
